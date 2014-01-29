@@ -10,6 +10,10 @@ module Metrika
       def authorize_token(auth_code)
         @token = (self.client.auth_code.get_token(auth_code) rescue nil)
       end
+      
+      def return_token(auth_code)
+        (self.client.auth_code.get_token(auth_code) rescue nil)
+      end
 
       def authorization_url
         self.client.auth_code.authorize_url
