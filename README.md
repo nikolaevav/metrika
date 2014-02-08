@@ -110,9 +110,9 @@ All statistics reports support :date1 and :date2 parameters among other paramete
     client.get_counter_stat_sources_search_engines(counter_id, params)
     client.get_counter_stat_sources_phrases(counter_id, params)
     client.get_counter_stat_sources_marketing(counter_id, params)
-    client.get_counter_stat_sources_direct_summary(counter_id, params)
-    client.get_counter_stat_sources_direct_platforms(counter_id, params)
-    client.get_counter_stat_sources_direct_regions(counter_id, params)
+    client.get_counter_stat_direct_summary(counter_id, params)
+    client.get_counter_stat_direct_platforms(counter_id, params)
+    client.get_counter_stat_direct_regions(counter_id, params)
     client.get_counter_stat_sources_tags(counter_id, params)
 
 **Content**
