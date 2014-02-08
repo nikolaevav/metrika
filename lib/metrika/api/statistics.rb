@@ -15,7 +15,7 @@ module Metrika
       end
 
       # Sources
-      %w( summary sites search_engines phrases marketing direct_summary direct_platforms direct_regions tags ).each do |report|
+      %w( summary sites search_engines phrases marketing tags ).each do |report|
         define_method "get_counter_stat_sources_#{report}" do | id, params = {} |
           params = self.format_params(params)
 
@@ -24,6 +24,19 @@ module Metrika
 
         define_method "counter_stat_sources_#{report}_path" do                
           "/stat/sources/#{report}"      
+        end        
+      end
+      
+      # Direct sources
+      %w( summary platforms regions ).each do |report|
+        define_method "get_counter_stat_direct_#{report}" do | id, params = {} |
+          params = self.format_params(params)
+
+          self.get(self.send("counter_stat_direct_#{report}_path"), params.merge(:id => id))
+        end
+
+        define_method "counter_stat_direct_#{report}_path" do                
+          "/stat/sources/direct/#{report}"      
         end        
       end
 
