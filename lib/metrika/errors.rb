@@ -5,7 +5,6 @@ module Metrika
 
       def initialize(data)
         # @data = data
-        nil
         super
       end
     end
