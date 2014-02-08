@@ -4,7 +4,8 @@ module Metrika
       DEFAULT_OAUTH_OPTIONS = {
         :site => 'http://api-metrika.yandex.ru',
         :authorize_url => 'https://oauth.yandex.ru/authorize',
-        :token_url => 'https://oauth.yandex.ru/token'        
+        :token_url => 'https://oauth.yandex.ru/token',
+        :raise_errors => false
       }      
         
       def authorize_token(auth_code)
