@@ -4,7 +4,8 @@ module Metrika
       attr_reader :data
 
       def initialize(data)
-        @data = data
+        # @data = data
+        nil
         super
       end
     end
